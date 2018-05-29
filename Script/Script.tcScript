@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<child name="Unit1" key="{20F79231-D1AB-4D4B-8C5B-17E500F3EEAE}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="Unit1.svb" />
+		</child>
+		<child name="ListandDropDown" key="{258CBDEB-F61D-41C9-9981-80540886AC84}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="ListandDropDown.svb" />
+		</child>
+		<child name="Unit2" key="{AB101783-6356-4BD6-B61C-2D7B6E5D3493}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="Unit2.svb" />
+		</child>
+		<child name="record" key="{73112DA1-4D57-4722-B193-14F4FB589405}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="record.svb" />
+		</child>
+		<child name="ScriptUsingLib" key="{AB632454-3CD6-459B-A762-99FEE45FBDD9}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="ScriptUsingLib.svb" />
+		</child>
+		<child name="ExcelandLib" key="{C2888FA3-11FA-401B-ACE3-F06AA57C15A5}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="ExcelandLib.svb" />
+		</child>
+		<child name="lib" key="{1AD28661-E09A-4BAA-B060-0D7F4011F224}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="..\..\..\Desktop\lib.vbs" />
+		</child>
+		<child name="exceldb" key="{6B11C7F6-8BF8-42C4-87AF-D2A89C78EEB3}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="..\..\..\Desktop\exceldb.vbs" />
+		</child>
+	</children>
+	<folders />
+</Root>

@@ -1,0 +1,27 @@
+﻿Sub Test1
+TestedApps.Orders.Run
+  Dim orders
+  Dim mainForm
+  Set orders = Sys.Waitprocess("Orders",10000)
+  Set mainForm = orders.WaitWinFormsObject("MainForm",10000)
+  mainForm.maximize
+  for i=1 to 3
+  Call mainForm.MainMenu.Click("Orders|New order...")
+  Set orderForm=orders.WinFormsObject("OrderForm")
+  IF orderForm.Exists Then
+  Log.Message("Success")
+  Else
+  Log.Error("Fail")
+  End If
+  set Total_Text=orderForm.FindChild("Name","*Total*",2000)
+  If Cint(Total_Text.wText)=100 Then
+   Log.Message("Success")
+  Else
+  Log.Error("Fail")
+  End If
+  
+  set OK_Button=orderForm.FindChild("Name","*ButtonOK*",2000)
+  OK_Button.click
+  Next
+  orders.Close
+End Sub

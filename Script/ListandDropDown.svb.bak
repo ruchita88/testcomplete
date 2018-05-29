@@ -1,0 +1,18 @@
+﻿Sub Test1
+  Dim listView
+  Set listView = Aliases.Orders.MainForm.OrdersView
+  Msgbox listView.wItemCount
+  MsgBox listView.wColumnCount
+  for i=0 to 1 
+  for j=0 to 10
+  Call listView.ClickItem(i,j)
+  aqUtils.delay(2000)
+  Next
+  Next
+  
+  'set productNames_DropDown=Sys.process("Orders").FindChild("Name","*ProductNames*",2000)
+  'productNames_DropDown.ClickItem(2)
+  'msgbox productNames_DropDown.wSelectedItem
+  'msgbox productNames_DropDown.wText
+  
+End Sub

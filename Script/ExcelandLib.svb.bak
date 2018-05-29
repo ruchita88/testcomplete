@@ -1,0 +1,34 @@
+﻿'USEUNIT exceldb
+'USEUNIT lib
+
+Sub TestOrders
+
+call Excel("C:\Users\rujain\Desktop\testcompleteex.xlsx","Sheet1")
+
+'To read the data from the entire Excel file
+j =1
+For  i= 2 to Row
+'    
+    Product  =  mysheet.cells(i,j).value
+    Quantity =  mysheet.cells(i,j+1).value
+    Discount =  mysheet.cells(i,j+2).value
+    'Date     =  mysheet.cells(i,j+3).value
+    Name     =  mysheet.cells(i,j+4).value
+    Card     =  mysheet.cells(i,j+5).value
+    'ExpDate  =  mysheet.cells(i,j+6).value
+
+
+
+  LaunchOrdersApp
+  MaximizeMainForm
+  OpenFromMenu "Orders|New order..."
+  SelectProduct (Product)
+  EnterQuantity(Quantity)
+  EnterDiscount(Discount)
+  EnterDate (Date)
+  EnterCustomerName (Name)
+  SelectCard (Card)
+  EnterExpiryDate (ExpDate)
+  CloseOrdersApp
+  Next
+End Sub

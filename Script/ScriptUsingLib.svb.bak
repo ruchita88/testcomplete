@@ -1,0 +1,13 @@
+﻿'USEUNIT lib
+Sub TestOrders
+  LaunchOrdersApp
+  MaximizeMainForm
+  OpenFromMenu "Orders|New order..."
+  SelectProduct "FamilyAlbum"
+  EnterQuantity(7)
+  EnterDiscount("3%")
+  EnterDate "2012-04-06"
+  EnterCustomerName "Aditya"
+  SelectCard "MasterCard"
+  EnterExpiryDate "2014-09-09"
+End Sub

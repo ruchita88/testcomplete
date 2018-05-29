@@ -1,0 +1,34 @@
+﻿ 'USEUNIT lib
+ 
+ Dim listView, orders, mainForm,OrderForm
+Sub Test1
+  Dim listView, orders, mainForm
+  Set orders=Sys.Process("Orders")
+  Set mainForm=orders.WinFormsObject("MainForm")
+  'Set listView = Aliases.Orders.MainForm.OrdersView
+  Set listView=mainForm.WinFormsObject("OrdersView")
+  row= listView.wItemCount
+  column= listView.wColumnCount
+  for i=0 to row-1
+  for j=0 to column-1
+  'Call listView.ClickItem(i, j)
+  'Call listView.ClickItem(1, 4)
+  'Msgbox listView.wItem(i,j)
+  Next
+  Next
+  Call listView.clickItem(row-1, 2)
+  Call listView.clickItem(row-1, 2)
+  Call mainForm.MainMenu.Click("Orders|New order...")
+  Test2 "MasterCard"
+End Sub
+
+Sub Test2
+  Aliases.Orders.OrderForm.Group.Date.wDate = "2005-11-06"
+End Sub
+
+Sub Test3
+  Dim groupBox
+  Set groupBox = Aliases.Orders.OrderForm.Group
+  groupBox.Date.wDate = "2005-01-06"
+  groupBox.ExpDate.wDate = "2005-07-06"
+End Sub

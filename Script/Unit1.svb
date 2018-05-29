@@ -1,0 +1,36 @@
+﻿Sub Test
+TestedApps.Orders.Run
+  Dim orders
+  Dim mainForm
+  Set orders = Sys.Process("Orders")
+  Set mainForm = orders.WaitWinFormsObject("MainForm",10000)
+  mainForm.Maximize
+  if mainForm.Exists Then
+  Log.Message "Success"
+  Else
+  Log.Error "Fail"
+  End If
+  Call mainForm.Click(234, 18)
+  Call mainForm.MainMenu.Click("Orders|New order...")
+  Set orderForm=orders.WinFormsObject("OrderForm")
+  Set productNames=orderForm.FindChild("Name","*Total*",2000)
+  if Cint(productNames.wText)=90 Then
+   Log.Message "Success"
+  Else
+  Log.Error "Fail"
+  End If
+
+End Sub
+
+Sub Test1
+  Dim listView
+  'Set listView = Aliases.Orders.MainForm.OrdersView
+  'Msgbox listView.wItemCount
+  'MsgBox listView.wColumnCount
+  
+  set productNames_DropDown=Sys.process("Orders").FindChild("Name","*ProductNames*",2000)
+  productNames_DropDown.ClickItem("FamilyAlbum")
+  msgbox productNames_DropDown.wSelectedItem
+  msgbox productNames_DropDown.wText
+  
+End Sub
